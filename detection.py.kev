@@ -7,9 +7,9 @@ GPIO.setup(37, GPIO.IN, pull_up_down=GPIO.PUD_UP) #Left sensor connection
 while True:
   i=GPIO.input(3)                         #Reading output of right IR sensor
   j=GPIO.input(37)                        #Reading output of left IR sensor
-  if i==1:                                #Right IR sensor detects an object
+  if i==0:                                #Right IR sensor detects an object
     print("Obstacle detected on Left"),i
   time.sleep(0.1)
-  if j==1:                              #Left IR sensor detects an object
+  if j==0:                              #Left IR sensor detects an object
     print("Obstacle detected on Right"),j
   time.sleep(0.1)
