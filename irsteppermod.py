@@ -32,7 +32,7 @@ for pin in control_pinsleft:
   for halfstep in range(8):
     for pin in range(4):
       GPIO.output(control_pins[pin], halfstep_seq[halfstep][pin])
-    time.sleep(0.001)
+  time.sleep(0.001)
 
   if j==1:                                #Right IR sensor detects an object
     print("Left"),j
